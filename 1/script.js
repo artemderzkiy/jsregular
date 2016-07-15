@@ -5,11 +5,35 @@
 		
 			var inp = str;
 			var answer=0;
-			var mas= str.match( /\d((.)(\d))/g );
-			
+			var masChis= str.match( /\d\.*\d*/g );
+			var masOper=str.match(/\-|\+|\*|\//g);
+			var masRes=[];
+			var strRes="";
+			var res=Number(masChis[0]);
+			console.log(masChis);
+			console.log(masOper);
 	
-	return mas;
+		for(var i=0,s=0;i<masChis.length || s<masOper.length;i++,s++) 
+		{
+				masRes.push(masChis[i],masOper[s]);
+				//console.log(masRes);
+				var str = masRes.join('');
+				console.log(str);
+				switch(masOper[s])
+				{
+					case '+' : res = res + Number(masChis[i]);
+					case '-' : res = res - Number(masChis[i]);
+					case '*' : res = res * Number(masChis[i]);
+					case '/' : res = res / Number(masChis[i]);
+				}
+				console.log(res);
+
+		}
+		//res=eval(str);
+
+	return res;
 	}	
 		console.log(podshet ("3.56 землекопа +4 поросенка *10 рублей - 5.5 $ /5 человек ="))
+	
 	})();
 

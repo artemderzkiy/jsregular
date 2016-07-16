@@ -10,6 +10,7 @@
 			var masRes=[];
 			var strRes="";
 			var res=Number(masChis[0]);
+			//var res =0;
 			console.log(masChis);
 			console.log(masOper);
 	
@@ -21,10 +22,10 @@
 				console.log(str);
 				switch(masOper[s])
 				{
-					case '+' : res = res + Number(masChis[i]);
-					case '-' : res = res - Number(masChis[i]);
-					case '*' : res = res * Number(masChis[i]);
-					case '/' : res = res / Number(masChis[i]);
+					case '+' : res = res + Number(masChis[i+1]);break;
+					case '-' : res = res - Number(masChis[i+1]);break;
+					case '*' : res = res * Number(masChis[i+1]);break;
+					case '/' : res = res / Number(masChis[i+1]);break;
 				}
 				console.log(res);
 
@@ -33,7 +34,7 @@
 
 	return res;
 	}	
-		console.log(podshet ("3.56 землекопа +4 поросенка *10 рублей - 5.5 $ /5 человек ="))
+		console.log(podshet ("3.5 землекопа +4 поросенка *10 рублей - 5.5 $ /5 человек ="))
 	
 	})();
 

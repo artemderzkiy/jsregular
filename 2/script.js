@@ -1,41 +1,16 @@
 
 (function () {
 
-	function first() {
-			var answer;
-			 	type = typeof(arguments[0]);
-
-		for (var i =0 ; i<arguments.length; i++) {
-		
-			if (typeof(arguments[i]) !== type )
-			{
-				throw('Разные типы');
-							}
-
-			}
-			
-		switch (type) {
-		case "number" :answer=0;
-		for (i = 0; i<arguments.length; i++)
-		{
-		 answer += arguments[i];
-		}
-		break;
-
-		case "string" :answer="";
-		for (i = 0; i<arguments.length; i++)
-		{
-		 answer += arguments[i];
-		}break;		
-		case "Object" :answer=[];
-		for (i = 0; i<arguments.length; i++)
-		{
-		 answer = answer.concat(arguments[i]);
-		}break;
-	}
+	function secondUdal(str) {
+			var masDel= str.replace( /\s|\.|\,|\?|\!|\:|\;/g , ''); 
 	
-	return answer;
-	}	
-		console.log(first (6,4,5))
+	
+	return masDel;
+	}
+
+	
+		console.log(secondUdal("Чего-с изволите-с?Барин-с!"))
+		console.log(secondUdal("!??слово!плов олово$$$!"))
+		console.log(secondUdal("!!!"))
 	})();
 
